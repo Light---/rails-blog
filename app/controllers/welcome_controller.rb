@@ -3,6 +3,6 @@ class WelcomeController < ApplicationController
   end
 
   def loser
-    
+
   end
 end
