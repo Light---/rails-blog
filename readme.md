@@ -1,0 +1,1 @@
+A blog to learn ruby from scratch
