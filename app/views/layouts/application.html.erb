@@ -8,20 +8,27 @@
 </head>
 <body>
 
+<div class="wrapper">
+  <div class="banner">
+    <h1 id="page-title">My Blog!</h1>
+    <div>hello, welcome to my blog!</div>
+    <div>The current time is: <%= Time.now.strftime("%d/%m/%Y %H:%M") %></div>
+  </div>
 
-<h1>My Blog!</h1>
-<div>hello, welcome to my blog!</div>
-<div>The current time is: <%= Time.now.strftime("%d/%m/%Y %H:%M") %></div>
+  <div class="navigation">
+    <a class="menu-link" href="<%= welcome_index_path %>" >Welcome page</a>
+    <a class="menu-link" href="<%= new_article_path %>" >Articles page</a>
+    <a class="menu-link" href="<%= current_projects_all_path %>" >Current Projects page</a>
+  </div>
 
+  <div class="content">
+    <%= yield %>
+  </div>
 
-<a href="<%= welcome_index_path %>" >Welcome page</a>
-
-<a href="<%= new_article_path %>" >Articles page</a>
-
-<a href="<%= current_projects_all_path %>" >Current Projects page</a>
-
-
-<%= yield %>
+  <div class="footer">
+     Emma Leary
+  </div>
+</div>
 
 </body>
 </html>

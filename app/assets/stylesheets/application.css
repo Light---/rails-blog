@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    background-color: #CCCCCC;
+}
+
+textarea, input[type='text'] {
+    width: 400px;
+}
+
+.wrapper {
+    width: 70%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.banner h1 {
+    color: darkred;
+}
+
+.navigation {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-top: 2px solid #2E2F30;
+    border-bottom: 2px solid #2E2F30;
+}
+
+.content h1 {
+    font-size: 18px;
+}
+
+.footer {
+    text-align: center;
+    text-decoration: underline;
+}
