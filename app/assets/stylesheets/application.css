@@ -18,10 +18,6 @@ body {
     background-color: #CCCCCC;
 }
 
-textarea, input[type='text'] {
-    width: 400px;
-}
-
 .wrapper {
     width: 70%;
     background-color: white;
@@ -33,7 +29,7 @@ textarea, input[type='text'] {
     color: darkred;
 }
 
-.navigation {
+.nav {
     text-align: center;
     padding: 10px;
     margin: 10px;

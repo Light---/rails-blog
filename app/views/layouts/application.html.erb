@@ -4,6 +4,14 @@
   <title>RailsBlog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -15,11 +23,12 @@
     <div>The current time is: <%= Time.now.strftime("%d/%m/%Y %H:%M") %></div>
   </div>
 
-  <div class="navigation">
-    <a class="menu-link" href="<%= welcome_index_path %>" >Welcome page</a>
-    <a class="menu-link" href="<%= new_article_path %>" >Articles page</a>
-    <a class="menu-link" href="<%= current_projects_all_path %>" >Current Projects page</a>
-  </div>
+  <ul class="nav nav-pills">
+    <li class="<%= page_active?(welcome_index_path) %>"> <a href="<%= welcome_index_path %>" >Welcome page</a></li>
+    <li class="<%= page_active?(new_article_path) %>"><a href="<%= new_article_path %>" >Articles page</a></li>
+    <li class="<%= page_active?(current_projects_all_path) %>"><a href="<%= current_projects_all_path %>" >Current Projects page</a></li>
+  </ul>
+
 
   <div class="content">
     <%= yield %>
