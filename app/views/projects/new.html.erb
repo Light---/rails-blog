@@ -1,0 +1,22 @@
+<h1>New Project</h1>
+
+<%= form_for :project, url: projects_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: "form-control" %>
+  </p>
+
+  <p>
+    <%= f.label :languages %><br>
+    <%= f.text_area :languages, class: "form-control" %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: "form-control" %>
+  </p>
+
+  <p>
+    <%= f.submit class: "btn btn-default"  %>
+  </p>
+<% end %>
