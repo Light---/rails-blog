@@ -1,18 +1,5 @@
-<html>
-
 <h1> Current Open Projects</h1>
 
-<body>
-
-<ul>
-
-<li> Rails Blog </li>
-
-<li>Hotter/Colder App </li>
-
-</ul>
-
-</body>
-
-
-</html>
+<% @projects.each do |project| %>
+  <div> <%= link_to project.name, project_path(project) %> </div>
+<% end %>

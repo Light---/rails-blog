@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def index
-
+   @projects = Project.all
   end
 
   def new
@@ -8,6 +8,19 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    @project = Project.new project_params
+    @project.save
 
+    redirect_to @project
+  end
+
+  def show
+    @project = Project.find(params[:id])
+  end
+  private
+
+  def project_params
+    params.require(:project)
+          .permit(:name, :languages, :description)
   end
 end
